@@ -3,6 +3,9 @@
 /public/storage
 /storage/*.key
 /vendor
+/public/mix-manifest.json
+/public/js
+/public/css
 .env
 .env.backup
 .phpunit.result.cache
