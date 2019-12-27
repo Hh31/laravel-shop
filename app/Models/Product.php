@@ -15,7 +15,7 @@ class Product extends Model
         'on_sale' => 'boolean',//on_sale是一个boolean类型的字段
     ];
 
-    public function sku() {
+    public function skus() {
         return $this->hasMany(ProductSku::class);
     }
 

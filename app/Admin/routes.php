@@ -10,8 +10,12 @@ Route::group([
     'middleware'    => config('admin.route.middleware'),
 ], function (Router $router) {
 
-    $router->get('/', 'HomeController@index')->name('admin.home');
-    $router->get('users','UsersController@index');
-    $router->get('products', 'ProductsController@index');
+    $router->get('/', 'HomeController@index')->name('admin.home');//后台主页
+    $router->get('users','UsersController@index');//用户管理
+    $router->get('products', 'ProductsController@index');//商品管理
+    $router->get('products/create','ProductsController@create');//新建商品
+    $router->post('products','ProductsController@store');
+    $router->get('products/{id}/edit', 'ProductsController@edit');//编辑商品
+    $router->put('products/{id}', 'ProductsController@update');
 
 });
