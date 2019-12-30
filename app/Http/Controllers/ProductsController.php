@@ -43,4 +43,12 @@ class ProductsController extends Controller
             ],
         ]);
     }
+
+    public function show (Request $request,Product $product) {
+        if (!$product->on_sale){
+            throw new \Exception('商品未上架');
+        }
+
+        return view('products.show',['product' => $product]);
+    }
 }
