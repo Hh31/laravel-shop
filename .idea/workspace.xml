@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f519568-5dd4-4b43-ae69-dbce1cc28415" name="Default Changelist" comment="" />
+    <list default="true" id="7f519568-5dd4-4b43-ae69-dbce1cc28415" name="Default Changelist" comment="登录注册，收货地址列表，">
+      <change afterPath="$PROJECT_DIR$/app/Exceptions/InternalException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Exceptions/InvalidRequestException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/error.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +128,12 @@
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
       <path value="$PROJECT_DIR$/vendor/caouecs/laravel-lang" />
       <path value="$PROJECT_DIR$/vendor/overtrue/laravel-lang" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/encore/laravel-admin" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/jxlwqq/quill" />
     </include_path>
   </component>
   <component name="ProjectId" id="1VPbziiH5pDczYgvV6N8pya8KzP" />
@@ -172,7 +184,7 @@
       <workItem from="1577258605728" duration="1220000" />
       <workItem from="1577259992798" duration="16426000" />
       <workItem from="1577328104321" duration="1977000" />
-      <workItem from="1577331644040" duration="10981000" />
+      <workItem from="1577331644040" duration="55355000" />
     </task>
     <task id="LOCAL-00001" summary="登录注册，收货地址列表，">
       <created>1577269185052</created>
