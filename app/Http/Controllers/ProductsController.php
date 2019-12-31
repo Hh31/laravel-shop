@@ -9,6 +9,12 @@ use Illuminate\Http\Request;
 class ProductsController extends Controller
 {
     //
+    /**
+     * 商品首页
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @author: hefusheng 2019/12/31
+     */
     public function index(Request $request) {
 //        $products = Product::query()->where('on_sale',true)->paginate(16);
 //
@@ -45,11 +51,54 @@ class ProductsController extends Controller
         ]);
     }
 
+    /**
+     * 商品详情页
+     * @param Request $request
+     * @param Product $product
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @throws InvalidRequestException
+     * @author: hefusheng 2019/12/31
+     */
     public function show (Request $request,Product $product) {
         if (!$product->on_sale) {
             throw new InvalidRequestException('商品未上架');
         }
+        $favored = false;
+        if($users = $request->user()){
+            $favored = boolval($users->favoriteProducts->find($product->id));
+        }
 
-        return view('products.show',['product' => $product]);
+        return view('products.show',['product' => $product,'favored' => $favored]);
+    }
+
+    /**
+     * 添加收藏
+     * @param Product $product
+     * @param Request $request
+     * @return array
+     * @author: hefusheng 2019/12/31
+     */
+    public function favor(Product $product,Request $request){
+        $users=$request->user();
+        if($users->favoriteProducts()->find($product->id)){
+            return [];
+        }
+
+        $users->favoriteProducts()->attach($product);
+        return [];
+    }
+
+    /**
+     * 取消收藏
+     * @param Product $product
+     * @param Request $request
+     * @return array
+     * @author: hefusheng 2019/12/31
+     */
+    public function disfavor(Product $product,Request $request){
+        $users = $request->user();
+        $users->favoriteProducts()->detach($product);
+
+        return [];
     }
 }
