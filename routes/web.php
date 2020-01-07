@@ -43,6 +43,8 @@ Route::group(['middleware' => ['auth','verified']], function () {
     Route::post('cart', 'CartController@add')->name('cart.add');
     Route::get('cart', 'CartController@index')->name('cart.index');//购物车详情
     Route::delete('cart/{sku}', 'CartController@remove')->name('cart.remove');
+
+    Route::post('orders', 'OrdersController@store')->name('orders.store');
 });
 
 Route::get('products/{product}','ProductsController@show')->name('products.show');//商品详情

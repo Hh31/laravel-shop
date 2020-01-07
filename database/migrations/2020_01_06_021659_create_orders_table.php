@@ -29,9 +29,9 @@ class CreateOrdersTable extends Migration
             $table->string('refund_on')->nullable()->unique()->comment('退款单号');
             $table->boolean('closed')->default(false)->comment('订单是否关闭');
             $table->boolean('reviewed')->default(false)->comment('订单是否评价');
-            $table->string('ship_status')->default(Order::SHIP_STATUS_PENDING)->comment('物流状态');
-            $table->text('ship_data')->comment('物流数据');
-            $table->text('extra')->comment('其他额外数据');
+            $table->string('ship_status')->default(Order::SHIP_STATUS_PENDING                                           )->comment('物流状态');
+            $table->text('ship_data')->nullable()->comment('物流数据');
+            $table->text('extra')->nullable()->comment('其他额外数据');
             $table->timestamps();
         });
     }

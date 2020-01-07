@@ -19,12 +19,12 @@ class CreateUserAddressesTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('province');
             $table->string('city');
-            $table->string('district');
-            $table->string('address');
-            $table->unsignedInteger('zip');
-            $table->string('contact_name');
-            $table->string('contact_phone');
-            $table->dateTime('last_used_at')->nullable();
+            $table->string('district')->comment('区');
+            $table->string('address')->comment('具体地址');
+            $table->unsignedInteger('zip')->comment('邮编');
+            $table->string('contact_name')->comment('联系人姓名');
+            $table->string('contact_phone')->comment('联系人电话');
+            $table->dateTime('last_used_at')->nullable()->comment('最后一次使用时间');
             $table->timestamps();
         });
     }

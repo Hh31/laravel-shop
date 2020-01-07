@@ -1,6 +1,6 @@
 <?php
 
-return [
+return array(
 
     /*
     |--------------------------------------------------------------------------
@@ -108,6 +108,7 @@ return [
 
     'faker_locale' => 'en_US',
 
+
     /*
     |--------------------------------------------------------------------------
     | Encryption Key
@@ -123,6 +124,8 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
+    'order_ttl' => 30,
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
@@ -134,7 +137,7 @@ return [
     |
     */
 
-    'providers' => [
+    'providers' => array(
 
         /*
          * Laravel Framework Service Providers...
@@ -175,7 +178,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-    ],
+    ),
 
     /*
     |--------------------------------------------------------------------------
@@ -188,7 +191,7 @@ return [
     |
     */
 
-    'aliases' => [
+    'aliases' => array(
 
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
@@ -226,6 +229,6 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
-    ],
+    ),
 
-];
+);

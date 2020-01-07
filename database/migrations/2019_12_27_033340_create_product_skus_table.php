@@ -15,10 +15,10 @@ class CreateProductSkusTable extends Migration
     {
         Schema::create('product_skus', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title');
-            $table->string('description');
+            $table->string('title')->comment('sku名称');
+            $table->string('description')->comment('sku描述');
             $table->decimal('price',10,2);
-            $table->unsignedInteger('stock');
+            $table->unsignedInteger('stock')->comment('库存');
             $table->unsignedBigInteger('product_id');
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->timestamps();
