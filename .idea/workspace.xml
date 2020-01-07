@@ -2,34 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f519568-5dd4-4b43-ae69-dbce1cc28415" name="Default Changelist" comment="登录注册，收货地址列表，">
-      <change afterPath="$PROJECT_DIR$/resources/views/orders/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/OrderService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/orders/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrdersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrdersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/az/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/pagination.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/es/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/fa/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/fr/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/he/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/id/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ja/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ko/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ms/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/nl/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/pl/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/pt-BR/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/pt/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ru/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/tr/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/uk/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/zh-TW/admin.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/orders/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/orders/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -212,7 +191,7 @@
       <workItem from="1578021158323" duration="1359000" />
       <workItem from="1578023027159" duration="16944000" />
       <workItem from="1578278821240" duration="27515000" />
-      <workItem from="1578362869715" duration="10400000" />
+      <workItem from="1578362869715" duration="20866000" />
     </task>
     <task id="LOCAL-00001" summary="登录注册，收货地址列表，">
       <created>1577269185052</created>
