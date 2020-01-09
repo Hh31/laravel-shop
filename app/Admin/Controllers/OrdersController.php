@@ -10,9 +10,11 @@ use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
+use Illuminate\Foundation\Validation\ValidatesRequests;
 
 class OrdersController extends AdminController
 {
+    use ValidatesRequests;
     /**
      * Title for current resource.
      *
@@ -129,5 +131,21 @@ class OrdersController extends AdminController
         if($order->ship_status !== Order::SHIP_STATUS_PENDING){
             throw new InternalException('该订单已发货');
         }
+        //
+        $data = $this->validate($request,[
+            'express_company' => ['required'],
+            'express_no' => ['required'],
+        ],[],[
+            'express_company' => '物流公司',
+            'express_no' => '物流编号'
+        ]);
+
+        $order->update([
+            'ship_status' => Order::SHIP_STATUS_DELIVERED,
+            'ship_data' => $data,
+        ]);
+
+        //返回上一页
+        return redirect()->back();
     }
 }
