@@ -2,6 +2,8 @@
 
 namespace App\Admin\Controllers;
 
+use App\Exceptions\InternalException;
+use App\Http\Requests\Request;
 use App\Models\Order;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
@@ -116,5 +118,16 @@ class OrdersController extends AdminController
     public function show($id, Content $content)
     {
         return $content->header('查看订单')->body(view('admin.orders.show',['order' =>Order::find($id)]));
+    }
+
+    public function ship(Order $order,Request $request){
+        //判断当前订单是否已支付
+        if(!$order->paid_at) {
+            throw new InternalException('该订单未付款');
+        }
+        //判断当前订单是是否发货
+        if($order->ship_status !== Order::SHIP_STATUS_PENDING){
+            throw new InternalException('该订单已发货');
+        }
     }
 }
